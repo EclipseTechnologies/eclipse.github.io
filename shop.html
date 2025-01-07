@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AndRPi | Shop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Shop AndRPi</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="docs.html">Docs</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>AndRPi Tablet</h2>
+      <p>Choose your configuration:</p>
+      <form>
+        <label for="ram">RAM:</label>
+        <select id="ram" name="ram">
+          <option value="2gb">2 GB</option>
+          <option value="4gb">4 GB</option>
+          <option value="8gb">8 GB</option>
+        </select>
+
+        <label for="storage">Storage:</label>
+        <select id="storage" name="storage">
+          <option value="128gb">128 GB</option>
+          <option value="256gb">256 GB</option>
+          <option value="512gb">512 GB</option>
+        </select>
+
+        <label for="byo">Bring Your Own Pi:</label>
+        <input type="checkbox" id="byo" name="byo">
+
+        <button type="submit">Add to Cart</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 AndRPi. All rights reserved.</p>
+  </footer>
+</body>
+</html>
