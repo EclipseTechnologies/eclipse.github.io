@@ -9,7 +9,7 @@
 <body>
   <header>
     <div class="navbar">
-      <a href="index.html" class="logo">AndRPi</a>
+      <a href="index.html" class="logo"><img src="images/logo.png" alt="AndRPi Logo"></a>
       <nav>
         <a href="index.html">Home</a>
         <a href="docs.html">Docs</a>
@@ -21,25 +21,25 @@
     <section class="product-showcase">
       <h1>AndRPi Tablet</h1>
       <div class="product-card">
-        <img src="tablet.png" alt="AndRPi Tablet">
+        <img id="product-image" src="images/tablet-2gb-128gb.png" alt="AndRPi Tablet">
         <div class="product-details">
           <h2>AndRPi Customizable Tablet</h2>
           <p>Build your perfect Android-powered Raspberry Pi tablet.</p>
           <form id="product-form">
             <label for="ram">Select RAM:</label>
-            <select id="ram" name="ram">
+            <select id="ram" name="ram" onchange="updateProductImage()">
               <option value="2gb">2 GB</option>
               <option value="4gb">4 GB</option>
               <option value="8gb">8 GB</option>
             </select>
             <label for="storage">Select Storage:</label>
-            <select id="storage" name="storage">
+            <select id="storage" name="storage" onchange="updateProductImage()">
               <option value="128gb">128 GB</option>
               <option value="256gb">256 GB</option>
               <option value="512gb">512 GB</option>
             </select>
             <label>
-              <input type="checkbox" id="byo" name="byo"> Bring Your Own Pi ($130)
+              <input type="checkbox" id="byo" name="byo" onchange="updateProductImage()"> Bring Your Own Pi ($130)
             </label>
             <button type="button" onclick="addToCart()">Add to Cart</button>
           </form>
