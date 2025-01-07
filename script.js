@@ -13,6 +13,15 @@ const prices = {
   "byo": 130
 };
 
+function updateProductImage() {
+  const ram = document.getElementById('ram').value;
+  const storage = document.getElementById('storage').value;
+  const byo = document.getElementById('byo').checked;
+
+  const image = byo ? "byo" : `${ram}-${storage}`;
+  document.getElementById("product-image").src = `images/tablet-${image}.png`;
+}
+
 function addToCart() {
   const ram = document.getElementById('ram').value;
   const storage = document.getElementById('storage').value;
@@ -24,6 +33,7 @@ function addToCart() {
   const product = { RAM: ram, Storage: storage, Price: `$${price.toFixed(2)}`, BYO: byo ? "Yes" : "No" };
   cart.push(product);
 
+  updateCart();
   alert("Item added to cart!");
 }
 
