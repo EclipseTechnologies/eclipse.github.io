@@ -30,8 +30,13 @@ function addToCart() {
   const storage = document.getElementById('storage').value;
   const byo = document.getElementById('byo').checked;
 
-  const key = `${ram}-${storage}`;
-  const price = prices[key] + (byo ? prices.byo : 0);
+  let price = 0;
+  if (byo) {
+    price = 130; // Set fixed price for BYO option
+  } else {
+    const key = `${ram}-${storage}`;
+    price = prices[key];
+  }
 
   const product = {
     RAM: ram,
@@ -70,7 +75,33 @@ function loadCart() {
   }
 }
 
-function checkout() {
-  alert("Proceeding to checkout...");
-  // Add logic for checkout here.
+// Load cart items on the checkout page
+function loadCartSummary() {
+  const cartDiv = document.getElementById('cart-summary');
+  cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  if (cart.length === 0) {
+    cartDiv.innerHTML = '<p>Your cart is empty.</p>';
+  } else {
+    const cartItems = cart.map(item => `
+      <p>${item.RAM} RAM, ${item.Storage} Storage, BYO: ${item.BYO}, Price: ${item.Price}</p>
+    `).join("");
+
+    const total = cart.reduce((sum, item) => sum + parseFloat(item.Price.slice(1)), 0).toFixed(2);
+
+    cartDiv.innerHTML = `
+      ${cartItems}
+      <p><strong>Total: $${total}</strong></p>
+    `;
+  }
 }
+
+// Call the loadCartSummary function when the page is loaded
+window.onload = loadCartSummary;
+
+// Proceed to payment (this can be further expanded with actual payment processing)
+function proceedToPayment() {
+  alert("Proceeding to payment...");
+  // Add payment processing logic here
+}
+
