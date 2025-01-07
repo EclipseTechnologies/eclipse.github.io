@@ -20,7 +20,7 @@
     <section>
       <h2>AndRPi Tablet</h2>
       <p>Customize your AndRPi Tablet:</p>
-      <form>
+      <form id="product-form">
         <label for="ram">RAM:</label>
         <select id="ram" name="ram">
           <option value="2gb">2 GB</option>
@@ -38,12 +38,19 @@
         <label for="byo">Bring Your Own Pi:</label>
         <input type="checkbox" id="byo" name="byo">
 
-        <button type="submit">Add to Cart</button>
+        <button type="button" onclick="addToCart()">Add to Cart</button>
       </form>
+    </section>
+    <section>
+      <h2>Cart</h2>
+      <div id="cart">
+        <p>Your cart is empty.</p>
+      </div>
     </section>
   </main>
   <footer>
     <p>&copy; 2025 AndRPi. All rights reserved.</p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
