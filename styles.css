@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
+  line-height: 1.6;
 }
 
 header {
@@ -24,13 +25,53 @@ header .navbar a {
   margin-left: 15px;
 }
 
-header .navbar a:hover {
+header .navbar a:hover,
+header .navbar a:focus {
   text-decoration: underline;
 }
 
 .logo img {
   width: 150px;
   height: auto;
+  alt: "AndRPi Logo";
+}
+
+/* Main Section */
+.hero {
+  background: #f4f4f4;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+.hero .btn {
+  padding: 10px 20px;
+  background-color: #0078d7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.hero .btn:hover {
+  background-color: #0053a1;
+}
+
+footer {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  margin-top: 20px;
 }
 
 /* Product Page */
@@ -81,8 +122,13 @@ header .navbar a:hover {
   cursor: pointer;
 }
 
-.product-details button:hover {
+.product-details button:hover,
+.product-details button:focus {
   background-color: #0053a1;
+}
+
+.product-details button:active {
+  background-color: #003974;
 }
 
 /* Cart Page */
@@ -109,14 +155,11 @@ header .navbar a:hover {
   cursor: pointer;
 }
 
-.checkout button:hover {
+.checkout button:hover,
+.checkout button:focus {
   background-color: #0053a1;
 }
 
-footer {
-  text-align: center;
-  background-color: #333;
-  color: white;
-  padding: 10px 0;
-  margin-top: 20px;
+.checkout button:active {
+  background-color: #003974;
 }
