@@ -1,50 +1,61 @@
-/* Adjusted styles for logo and other elements */
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
+
+header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+header .navbar a:hover {
+  text-decoration: underline;
+}
+
 .logo img {
   width: 150px;
   height: auto;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
-}
-
-.navbar nav a {
-  color: #fff;
-  margin-left: 15px;
-  text-decoration: none;
-}
-
-.navbar nav a:hover {
-  text-decoration: underline;
-}
-
-/* Product page updates */
+/* Product Page */
 .product-showcase {
-  padding: 20px;
   text-align: center;
+  padding: 20px;
 }
 
 .product-card {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  align-items: center;
+  margin-top: 20px;
 }
 
 .product-card img {
   width: 300px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .product-details {
   max-width: 400px;
+  text-align: left;
 }
 
 .product-details h2 {
@@ -57,9 +68,27 @@
   gap: 10px;
 }
 
-/* Cart updates */
+.product-details label {
+  font-weight: bold;
+}
+
+.product-details button {
+  padding: 10px;
+  background-color: #0078d7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-details button:hover {
+  background-color: #0053a1;
+}
+
+/* Cart Page */
 .cart {
   padding: 20px;
+  text-align: center;
 }
 
 .cart ul {
@@ -68,14 +97,13 @@
 }
 
 .cart li {
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
 .checkout button {
-  margin-top: 10px;
   padding: 10px 20px;
   background-color: #0078d7;
-  color: #fff;
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -85,10 +113,10 @@
   background-color: #0053a1;
 }
 
-/* Footer */
 footer {
   text-align: center;
-  padding: 10px 0;
   background-color: #333;
-  color: #fff;
+  color: white;
+  padding: 10px 0;
+  margin-top: 20px;
 }
