@@ -8,41 +8,45 @@
 </head>
 <body>
   <header>
-    <h1>Shop AndRPi</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="docs.html">Docs</a></li>
-      </ul>
-    </nav>
+    <div class="navbar">
+      <a href="index.html" class="logo">AndRPi</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="docs.html">Docs</a>
+      </nav>
+    </div>
   </header>
   <main>
-    <section>
-      <h2>AndRPi Tablet</h2>
-      <p>Customize your AndRPi Tablet:</p>
-      <form id="product-form">
-        <label for="ram">RAM:</label>
-        <select id="ram" name="ram">
-          <option value="2gb">2 GB</option>
-          <option value="4gb">4 GB</option>
-          <option value="8gb">8 GB</option>
-        </select>
-
-        <label for="storage">Storage:</label>
-        <select id="storage" name="storage">
-          <option value="128gb">128 GB</option>
-          <option value="256gb">256 GB</option>
-          <option value="512gb">512 GB</option>
-        </select>
-
-        <label for="byo">Bring Your Own Pi:</label>
-        <input type="checkbox" id="byo" name="byo">
-
-        <button type="button" onclick="addToCart()">Add to Cart</button>
-      </form>
+    <section class="product-showcase">
+      <h1>AndRPi Tablet</h1>
+      <div class="product-card">
+        <img src="tablet.png" alt="AndRPi Tablet">
+        <div class="product-details">
+          <h2>AndRPi Customizable Tablet</h2>
+          <p>Build your perfect Android-powered Raspberry Pi tablet.</p>
+          <form id="product-form">
+            <label for="ram">Select RAM:</label>
+            <select id="ram" name="ram">
+              <option value="2gb">2 GB</option>
+              <option value="4gb">4 GB</option>
+              <option value="8gb">8 GB</option>
+            </select>
+            <label for="storage">Select Storage:</label>
+            <select id="storage" name="storage">
+              <option value="128gb">128 GB</option>
+              <option value="256gb">256 GB</option>
+              <option value="512gb">512 GB</option>
+            </select>
+            <label>
+              <input type="checkbox" id="byo" name="byo"> Bring Your Own Pi
+            </label>
+            <button type="button" onclick="addToCart()">Add to Cart</button>
+          </form>
+        </div>
+      </div>
     </section>
-    <section>
-      <h2>Cart</h2>
+    <section class="cart">
+      <h2>Your Cart</h2>
       <div id="cart">
         <p>Your cart is empty.</p>
       </div>
