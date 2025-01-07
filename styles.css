@@ -1,80 +1,123 @@
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
+  color: #333;
   background-color: #f9f9f9;
 }
 
-header {
-  background: #4CAF50;
-  color: white;
-  padding: 1rem;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #000;
+  color: #fff;
+}
+
+.navbar .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1em;
+}
+
+.hero {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.hero-content .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.product-showcase {
+  padding: 40px 20px;
   text-align: center;
 }
 
-header h1 {
-  margin: 0;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
+.product-card {
   display: flex;
   justify-content: center;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-
-main {
+  align-items: center;
+  gap: 20px;
+  background-color: #fff;
   padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-  color: #4CAF50;
+.product-card img {
+  width: 200px;
 }
 
-form label {
+.product-details {
+  max-width: 400px;
+  text-align: left;
+}
+
+.product-details h2 {
+  margin: 0 0 10px;
+}
+
+.product-details label {
   display: block;
   margin: 10px 0 5px;
 }
 
-form select, form input[type="checkbox"], button {
-  padding: 10px;
-  margin-bottom: 15px;
+.product-details select,
+.product-details button {
   width: 100%;
-  max-width: 300px;
-  display: block;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
 }
 
-button {
-  background: #4CAF50;
-  color: white;
+.product-details button {
+  background-color: #4CAF50;
+  color: #fff;
   border: none;
   cursor: pointer;
 }
 
-button:hover {
-  background: #45a049;
-}
-
-#cart {
-  background: white;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+.cart {
+  padding: 20px;
+  background-color: #fff;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 footer {
   text-align: center;
-  padding: 10px;
-  background: #f1f1f1;
+  padding: 20px;
+  background-color: #000;
+  color: #fff;
 }
