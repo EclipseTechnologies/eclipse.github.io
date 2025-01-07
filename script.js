@@ -41,7 +41,11 @@ function addToCart() {
   };
 
   cart.push(product);
-  localStorage.setItem("cart", JSON.stringify(cart)); // Save to local storage
+  try {
+    localStorage.setItem("cart", JSON.stringify(cart)); // Save to local storage
+  } catch (error) {
+    alert("Error saving cart data. Please try again.");
+  }
   alert("Item added to cart!");
 }
 
