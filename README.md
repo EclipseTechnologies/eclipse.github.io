@@ -1,3 +1,4 @@
+# DO NOT BUY FROM THE WEBSITE YET! If you want to buy this tablet email me at [nellowtcs@gmail.com](mailto:nellowtcs@gmail.com)
 # AndRPi - Android Tablet & Raspberry Pi Integration
 
 A modern e-commerce platform for purchasing Android tablets with pre-configured Raspberry Pi integration capabilities.
