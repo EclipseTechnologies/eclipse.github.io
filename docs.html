@@ -3,33 +3,156 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AndRPi documentation - Learn how to set up and customize your Android tablet">
+  <meta name="theme-color" content="#0078d7">
   <title>AndRPi | Documentation</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  
+  <!-- Preload critical assets -->
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="preload" href="script.js" as="script">
+  
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <header role="banner">
     <div class="navbar">
-      <a href="index.html" class="logo"><img src="images/logo.png" alt="AndRPi Logo"></a>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="docs.html">Docs</a>
-        <a href="cart.html">Cart</a>
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="AndRPi Logo" width="120" height="40">
+      </a>
+      
+      <nav role="navigation" aria-label="Main navigation">
+        <a href="shop.html">Shop</a>
+        <a href="docs.html" aria-current="page">Documentation</a>
+        <a href="cart.html" class="cart-link">
+          Cart
+          <span id="cart-count" class="cart-count" aria-label="Items in cart">0</span>
+        </a>
       </nav>
     </div>
   </header>
-  <main>
-    <section>
-      <h2>Getting Started</h2>
-      <p>Welcome to AndRPi! Follow these steps to set up your device:</p>
-      <ol>
-        <li>Unbox your AndRPi tablet or prepare your own Raspberry Pi.</li>
-        <li>Insert your pre-installed MicroSD card or install the AndRPi OS on your own card.</li>
-        <li>Follow the on-screen setup instructions to configure your tablet.</li>
-      </ol>
-    </section>
+
+  <main id="main-content" role="main" class="docs-content">
+    <div class="docs-container">
+      <aside class="docs-sidebar" role="navigation" aria-label="Documentation navigation">
+        <nav class="docs-nav">
+          <h2>Documentation</h2>
+          <ul>
+            <li><a href="#getting-started">Getting Started</a></li>
+            <li><a href="#setup">Initial Setup</a></li>
+            <li><a href="#customization">Customization</a></li>
+            <li><a href="#troubleshooting">Troubleshooting</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <div class="docs-main">
+        <section id="getting-started">
+          <h1>Getting Started with AndRPi</h1>
+          <p>Welcome to the AndRPi documentation. Here you'll find everything you need to know about setting up and using your custom Android tablet.</p>
+          
+          <h2>What's in the Box</h2>
+          <ul>
+            <li>AndRPi Tablet</li>
+            <li>Power Adapter</li>
+            <li>Quick Start Guide</li>
+            <li>USB-C Cable</li>
+          </ul>
+        </section>
+
+        <section id="setup">
+          <h2>Initial Setup</h2>
+          <ol>
+            <li>
+              <h3>Power On</h3>
+              <p>Press and hold the power button for 3 seconds to turn on your AndRPi tablet.</p>
+            </li>
+            <li>
+              <h3>Initial Configuration</h3>
+              <p>Follow the on-screen instructions to set up Wi-Fi, Google account, and basic preferences.</p>
+            </li>
+            <li>
+              <h3>System Update</h3>
+              <p>Check for and install any available system updates to ensure optimal performance.</p>
+            </li>
+          </ol>
+        </section>
+
+        <section id="customization">
+          <h2>Customization</h2>
+          <h3>Hardware Upgrades</h3>
+          <p>If you purchased the BYO version, follow these steps to install your components:</p>
+          <ol>
+            <li>Remove the back cover using the provided tool</li>
+            <li>Locate the RAM and storage slots</li>
+            <li>Install your components following the marked orientation</li>
+            <li>Replace the back cover</li>
+          </ol>
+        </section>
+
+        <section id="troubleshooting">
+          <h2>Troubleshooting</h2>
+          <h3>Common Issues</h3>
+          <dl>
+            <dt>Tablet won't turn on</dt>
+            <dd>Ensure the battery is charged and try holding the power button for 10 seconds.</dd>
+            
+            <dt>Slow performance</dt>
+            <dd>Check running apps and close unused ones. Consider performing a system update.</dd>
+            
+            <dt>Wi-Fi connectivity issues</dt>
+            <dd>Toggle Wi-Fi off and on, or restart the tablet if problems persist.</dd>
+          </dl>
+        </section>
+
+        <section id="faq">
+          <h2>Frequently Asked Questions</h2>
+          <details>
+            <summary>Can I upgrade the RAM later?</summary>
+            <p>Yes, the RAM is upgradeable on all AndRPi models. Follow the hardware upgrade guide in the customization section.</p>
+          </details>
+          
+          <details>
+            <summary>What Android version is installed?</summary>
+            <p>All AndRPi tablets come with the latest stable Android version optimized for Raspberry Pi.</p>
+          </details>
+          
+          <details>
+            <summary>Is the warranty void if I upgrade components?</summary>
+            <p>No, hardware upgrades don't void the warranty as long as they're performed according to our guidelines.</p>
+          </details>
+        </section>
+      </div>
+    </div>
   </main>
-  <footer>
-    <p>&copy; 2025 AndRPi. All rights reserved.</p>
+
+  <footer role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-links">
+        <nav aria-label="Footer navigation">
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+        </nav>
+      </div>
+      <p class="copyright">&copy; 2025 AndRPi. All rights reserved.</p>
+    </div>
   </footer>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
 </body>
 </html>

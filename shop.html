@@ -3,53 +3,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AndRPi | Shop</title>
+  <meta name="description" content="Shop for custom AndRPi tablets. Configure your perfect Android tablet with various RAM and storage options.">
+  <meta name="theme-color" content="#0078d7">
+  <title>AndRPi | Shop Custom Tablets</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  
+  <!-- Preload critical assets -->
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="preload" href="script.js" as="script">
+  
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <header role="banner">
     <div class="navbar">
-      <a href="index.html" class="logo"><img src="images/logo.png" alt="AndRPi Logo"></a>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="docs.html">Docs</a>
-        <a href="cart.html">Cart</a>
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="AndRPi Logo" width="120" height="40">
+      </a>
+      
+      <nav role="navigation" aria-label="Main navigation">
+        <a href="shop.html" aria-current="page">Shop</a>
+        <a href="docs.html">Documentation</a>
+        <a href="cart.html" class="cart-link">
+          Cart
+          <span id="cart-count" class="cart-count" aria-label="Items in cart">0</span>
+        </a>
       </nav>
     </div>
   </header>
-  <main>
+
+  <main id="main-content" role="main">
     <section class="product-showcase">
-      <h1>AndRPi Tablet</h1>
-      <div class="product-card">
-        <img id="product-image" src="images/tablet-2gb-128gb.png" alt="AndRPi Tablet">
-        <div class="product-details">
-          <h2>AndRPi Customizable Tablet</h2>
-          <p>Build your perfect Android-powered Raspberry Pi tablet.</p>
-          <form id="product-form">
-            <label for="ram">Select RAM:</label>
-            <select id="ram" name="ram" onchange="updateProductImage()">
-              <option value="2gb">2 GB</option>
-              <option value="4gb">4 GB</option>
-              <option value="8gb">8 GB</option>
-            </select>
-            <label for="storage">Select Storage:</label>
-            <select id="storage" name="storage" onchange="updateProductImage()">
-              <option value="128gb">128 GB</option>
-              <option value="256gb">256 GB</option>
-              <option value="512gb">512 GB</option>
-            </select>
-            <label>
-              <input type="checkbox" id="byo" name="byo" onchange="updateProductImage()"> Bring Your Own Pi ($130)
-            </label>
-            <button type="button" onclick="addToCart()">Add to Cart</button>
+      <h1>Configure Your AndRPi Tablet</h1>
+      
+      <div class="product-container">
+        <div class="product-image">
+          <img id="product-image" src="images/tablet-4gb-256gb.png" alt="AndRPi Tablet Preview" width="500" height="300">
+        </div>
+        
+        <div class="product-config">
+          <form id="product-form" class="config-form">
+            <div class="form-group">
+              <label for="ram">RAM Configuration:</label>
+              <select id="ram" name="ram" required>
+                <option value="2gb">2GB RAM</option>
+                <option value="4gb" selected>4GB RAM</option>
+                <option value="8gb">8GB RAM</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="storage">Storage Capacity:</label>
+              <select id="storage" name="storage" required>
+                <option value="128gb">128GB Storage</option>
+                <option value="256gb" selected>256GB Storage</option>
+                <option value="512gb">512GB Storage</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="byo" name="byo">
+                <span>BYO (Bring Your Own Components)</span>
+              </label>
+              <p class="help-text">Save money by using your own RAM and storage components.</p>
+            </div>
+
+            <div class="price-display">
+              <p>Current Configuration Price: <span id="price-display">$220.00</span></p>
+            </div>
+
+            <button type="button" onclick="addToCart()" class="btn primary">Add to Cart</button>
           </form>
         </div>
       </div>
     </section>
+
+    <section class="features" aria-labelledby="features-title">
+      <h2 id="features-title">Included Features</h2>
+      <div class="features-grid">
+        <div class="feature">
+          <img src="images/android-icon.svg" alt="" aria-hidden="true">
+          <h3>Latest Android</h3>
+          <p>Pre-installed with the latest Android version optimized for Raspberry Pi.</p>
+        </div>
+        <div class="feature">
+          <img src="images/warranty-icon.svg" alt="" aria-hidden="true">
+          <h3>1-Year Warranty</h3>
+          <p>Full coverage warranty with expert technical support.</p>
+        </div>
+        <div class="feature">
+          <img src="images/support-icon.svg" alt="" aria-hidden="true">
+          <h3>Free Support</h3>
+          <p>Access to our community forums and technical documentation.</p>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer>
-    <p>&copy; 2025 AndRPi. All rights reserved.</p>
+
+  <footer role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-links">
+        <nav aria-label="Footer navigation">
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+        </nav>
+      </div>
+      <p class="copyright">&copy; 2025 AndRPi. All rights reserved.</p>
+    </div>
   </footer>
-  <script src="script.js"></script>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
 </body>
 </html>
