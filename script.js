@@ -75,6 +75,11 @@ function loadCart() {
   }
 }
 
+function checkout() {
+  alert("Proceeding to checkout...");
+  window.location.href = "checkout.html";
+}
+
 // Load cart items on the checkout page
 function loadCartSummary() {
   const cartDiv = document.getElementById('cart-summary');
